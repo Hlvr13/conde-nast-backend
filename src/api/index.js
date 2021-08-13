@@ -4,6 +4,9 @@ const {
     v2: { sources, topHeadlines, everything },
 } = new NewsApi(process.env.API_KEY);
 
+/** NO Arg needed
+ * @Filters => category, language, country
+ */
 export const getSources = async (args = {}) => {
     try {
         return sources(args);
@@ -12,6 +15,9 @@ export const getSources = async (args = {}) => {
     }
 };
 
+/** Need to include at least one of arguments
+ * @Filters => country, category q, pageSize, page
+ */
 export const getTopHeadlines = async (args = { country: 'us' }) => {
     try {
         return topHeadlines(args);
@@ -20,7 +26,10 @@ export const getTopHeadlines = async (args = { country: 'us' }) => {
     }
 };
 
-export const getEverything = async (args = { country: 'us' }) => {
+/** Need to include at least one of arguments
+ * @Filters => qInTitle, q, from, to, language, sortBy, pageSize, page
+ */
+export const getEverything = async (args = { language: 'en' }) => {
     try {
         return everything(args);
     } catch (error) {
