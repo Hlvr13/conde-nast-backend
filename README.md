@@ -24,7 +24,7 @@ You can use your own key, obtained via newsapi.org, or my personal one, which I 
 This app depends on a local frontend service. You can clone, run and follow instruction on the following repo:
 
 <div style="display:flex; align-items:center">
-<img style="margin-right:12px" width="22px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
+<img style="margin-right:12px" width="32px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
 <a href="https://github.com/Hlvr13/conde-nast-frontend" rel="noopener noreferrer">https://github.com/Hlvr13/conde-nast-frontend</a>
 </div>
 
