@@ -1,16 +1,10 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
-
+import { SourceType } from './source';
 export const TopHeadlinesType = new GraphQLObjectType({
     name: 'TopHeadlines',
     fields: () => ({
         source: {
-            type: new GraphQLObjectType({
-                name: 'TopHeadlinesSource',
-                fields: () => ({
-                    id: { type: GraphQLString },
-                    name: { type: GraphQLString },
-                }),
-            }),
+            type: SourceType,
         },
         author: { type: GraphQLString },
         title: { type: GraphQLString },
